@@ -7,10 +7,10 @@ class KasutajaLiides {
             const veerg = rida[i].querySelector(paevaNimetus);
             if (i % 2 == 0) {
                 veerg.classList.add('timetable-workout');
-                veerg. appendChild(document.createTextNode(`${tund.aine} - ${tund.grupp}`));
+                veerg.appendChild(document.createTextNode(`${tund.aine} - ${tund.grupp}`));
             } else {
                 veerg.classList.add('timetable-workout');
-                veerg. appendChild(document.createTextNode(tund.ruum));
+                veerg.appendChild(document.createTextNode(tund.ruum));
             }
         }
     }

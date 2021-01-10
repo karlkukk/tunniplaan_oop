@@ -1,11 +1,12 @@
-class Tunniplaan {
-    constructor(opetaja, kuupaev) {
+class Tunniplaan{
+    constructor(opetaja, kp) {
         this.opetaja = opetaja;
-        this.kuupaev = kuupaev;
+        this.kp = kp;
     }
 
-    async opetajaTunniplaanAndmed() {
-        const vastus = await fetch('https://siseveeb.khk.ee/veebilehe_andmed/tunniplaan?opetaja=' + this.opetaja + '&nadal=' + this.kuupaev);
+    async opetajaTunniplaaniAndmed(){
+        const vastus = await fetch('https://siseveeb.khk.ee/veebilehe_andmed/tunniplaan?opetaja=' +
+            this.opetaja + '&nadal=' + this.kp);
         const andmed = await vastus.json();
         return andmed;
     }

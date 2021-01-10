@@ -1,14 +1,12 @@
-// tunniplaani objekt
-const tunniplaan = new Tunniplaan(346, '2021-01-04');
-// kasutajaliideses objekt
-const kl = new KasutajaLiides();
 
-// tunniplaani valjastamine
+const tunniplaan = new Tunniplaan(346, '2019-04-01');
+const kl = new Kasutajaliides();
 
-document.addEventListener('DOMContentLoaded', valjastaTunniplaan);
+document.addEventListener('DOMContentLoaded', valjastatudTunniplaan);
 
-function valjastaTunniplaan() {
-    tunniplaan.opetajaTunniplaanAndmed().then(tunnid => {
-        kl.printNadalaKuupaevad(kl.nadalaKuupaevad(tunnid));
+function valjastatudTunniplaan(){
+    tunniplaan.opetajaTunniplaaniAndmed().then(tunnid => {
+        kl.printNadalakp(kl.nadalaKuupaevad(tunnid));
+        kl.print(tunnid);
     }).catch(viga => console.log(viga));
 }
